@@ -191,7 +191,49 @@ body {
   }
 
   .footer {
-    width: 35rem;
+    width: 30rem;
+    height: 15rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .search {
+    width: 25rem;
+  }
+
+  .footer {
+    width: 25rem;
+    height: 15rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .search {
+    width: 22rem;
+  }
+
+  .footer {
+    width: 22rem;
+    height: 15rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar {
+    width: 25rem;
+  }
+
+  .card {
+    height: 10rem;
+    width: 16rem;
+  }
+
+  .search {
+    width: 20rem;
+  }
+
+  .footer {
+    width: 20rem;
     height: 15rem;
   }
 }
