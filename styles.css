@@ -1,0 +1,197 @@
+body {
+  margin: 0;
+}
+
+.lines {
+  transform: translate(1.5rem, 1.5rem);
+  padding-top: 0.3rem;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+
+  background-color: #fff;
+  width: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+}
+
+.line {
+  height: 0.2rem;
+  width: 2rem;
+  background-color: gray;
+  margin-bottom: 0.3rem;
+}
+
+.navbar {
+  background-color: #232e22;
+  width: 100vw;
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-content {
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 54%;
+  box-sizing: border-box;
+}
+
+.git-logo {
+  height: 3rem;
+}
+
+.navbar-title {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  width: 18rem;
+  height: 100%;
+  left: 0;
+
+  background-color: gray;
+  position: fixed;
+  display: block;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: left 0.5s cubic-bezier(1, 0, 0, 1);
+  z-index: 10;
+
+  background: rgb(236, 238, 238);
+  background: linear-gradient(
+    0deg,
+    rgba(236, 238, 238, 1) 0%,
+    rgba(73, 69, 61, 1) 100%
+  );
+}
+
+.show-sidebar {
+  left: 0rem;
+}
+
+/* MAIN CONTENT */
+.container {
+  padding-top: 7rem;
+  margin-left: 18rem;
+}
+
+.search {
+  border-radius: 1rem;
+  width: 35rem;
+  height: 3rem;
+  background-color: gray;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cards {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  height: 10rem;
+  width: 15rem;
+  background-color: gray;
+  text-align: center;
+}
+
+.footer {
+  margin: 2rem auto;
+  width: 40rem;
+  height: 10rem;
+  background-color: gray;
+  text-align: center;
+}
+
+/* =============================================== */
+/* RESPONSIVE LAYOUT */
+/* =============================================== */
+
+@media (max-width: 1100px) {
+  .navbar {
+    background-color: #232e22;
+    height: 5rem;
+  }
+
+  .lines {
+    opacity: 1;
+    transform: translate(1.5rem, 1.5rem);
+  }
+
+  .sidebar {
+    position: fixed;
+    left: -18rem;
+  }
+
+  .show-sidebar {
+    left: 0rem;
+  }
+
+  .container {
+    margin-left: 0;
+  }
+
+  .navbar-content {
+    padding-left: 43%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .navbar-title {
+    margin-left: 0.5rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .card {
+    margin-top: 1rem;
+  }
+
+  .footer {
+    width: 35rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .search {
+    width: 30rem;
+  }
+
+  .cards {
+    margin: 0 auto;
+    width: 25rem;
+  }
+
+  .card {
+    margin-top: 1rem;
+    height: 10rem;
+    width: 20rem;
+  }
+
+  .footer {
+    width: 35rem;
+    height: 15rem;
+  }
+}
